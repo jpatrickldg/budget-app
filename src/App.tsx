@@ -4,7 +4,10 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // Routes
-import Dashboard, { dashboardLoader } from "./pages/Dashboard.tsx";
+import Dashboard, {
+  dashboardAction,
+  dashboardLoader,
+} from "./pages/Dashboard.tsx";
 import Error from "./pages/Error.tsx";
 
 // Layouts
@@ -24,6 +27,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Dashboard />,
         loader: dashboardLoader,
+        action: dashboardAction,
         errorElement: <Error />,
       },
       {
